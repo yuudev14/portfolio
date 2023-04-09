@@ -1,6 +1,8 @@
 import React from "react";
 import { Variants, motion } from "framer-motion";
 import { AnimatePresence } from "framer-motion";
+import Card from "@/components/common/Card";
+import { useRouter } from "next/router";
 
 interface ListProps {
   proj: Record<string, any>;
@@ -22,6 +24,9 @@ const List: React.FC<ListProps> = ({ proj, index }) => {
       },
     },
   };
+
+  const router = useRouter();
+
   return (
     <AnimatePresence>
       <motion.li
@@ -32,16 +37,21 @@ const List: React.FC<ListProps> = ({ proj, index }) => {
         className={`flex w-full card ${
           isOdd ? "justify-start" : "justify-end"
         }`}>
-        <motion.div className="h-full">
-          <motion.figure className="h-full">
-            <motion.img
-              className="card-image object-cover min-h-full"
-              src={proj.images}
-              alt=""
-              initial={false}
-            />
-          </motion.figure>
-        </motion.div>
+        <Card
+          info={proj}
+          onClick={() =>
+            router.push(
+              {
+                pathname: "/",
+                query: {
+                  project: index,
+                },
+              },
+              undefined,
+              { scroll: false }
+            )
+          }
+        />
       </motion.li>
     </AnimatePresence>
   );

@@ -8,8 +8,8 @@ body {
 
 .card {
   position: relative;
-  padding: 5px;
-  height: 300px;
+  padding: 25px;
+  height: 350px;
   flex: 0 0 45%;
   max-width: 45%;
 }
