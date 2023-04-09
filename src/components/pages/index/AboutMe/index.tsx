@@ -49,9 +49,11 @@ const AboutMe = () => {
           <motion.figure className="w-[170px] h-[170px] rounded-full overflow-hidden">
             <Image src="/images/yu.jpg" height={170} width={170} alt="banner" />
           </motion.figure>
-          <motion.button className="text-[#15513d] text-xl font-semibold px-4 py-2 w-full max-w-[200px] rounded-[5px] bg-[#12ffb0]">
-            Resume
-          </motion.button>
+          <a href={process.env.NEXT_PUBLIC_RESUME} target="_blank">
+            <motion.button className="text-[#15513d] text-xl font-semibold px-4 py-2 w-full max-w-[200px] rounded-[5px] bg-[#12ffb0]">
+              Resume
+            </motion.button>
+          </a>
         </motion.div>
         <motion.div
           variants={rightInitialVariants}
