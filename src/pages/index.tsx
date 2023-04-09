@@ -4,6 +4,7 @@ import Timeline from "@/components/pages/index/Timeline";
 import Banner from "@/components/pages/index/Banner";
 import AboutMe from "@/components/pages/index/AboutMe";
 import Header from "@/components/common/Header";
+import Skills from "@/components/pages/index/Skills";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -12,6 +13,7 @@ export default function Home() {
     <main className="w-full max-w-[1080px] m-auto px-3 overflow-hidden flex mb-[100px] flex-col gap-16">
       <Header />
       <Banner />
+      <Skills />
       <Timeline />
       <ProjectLists />
       <AboutMe />

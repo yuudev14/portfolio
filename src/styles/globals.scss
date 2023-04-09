@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+@import "skills.scss";
+
+@include skills;
+
 body {
   background: rgb(30, 48, 75);
   background: linear-gradient(
