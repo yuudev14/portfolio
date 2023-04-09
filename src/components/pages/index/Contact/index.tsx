@@ -3,30 +3,45 @@ import emailjs from "emailjs-com";
 
 const Contact = () => {
   const [emailResult, setEmailResult] = useState({
-    result: "Success",
-    status: "success",
+    result: "",
+    status: "",
   });
   const sendEmail = async (e: any) => {
     e.preventDefault();
-    // try {
-    //   await emailjs.sendForm(
-    //     "service_9n7zdyk",
-    //     "template_cyh6xhk",
-    //     e.target,
-    //     "user_73maMOZ3j8rcV5J4bIqKJ"
-    //   );
-    //   setEmailResult({
-    //     result: `Email sent. Thank you very much`,
-    //     status: "success",
-    //   });
-    //   document.querySelector(".contact form").reset();
-    // } catch (error) {
-    //   console.log(error);
-    //   setEmailResult({
-    //     result: error.text,
-    //     status: "failed",
-    //   });
-    // }
+    try {
+      await emailjs.sendForm(
+        process.env.NEXT_PUBLIC_SECRET_EMAIL as string,
+        process.env.NEXT_PUBLIC_TEMPLATE_EMAIL as string,
+        e.target,
+        process.env.NEXT_PUBLIC_PUBLIC_EMAIL as string
+      );
+      setEmailResult({
+        result: `Email sent. Thank you very much`,
+        status: "success",
+      });
+
+      setTimeout(() => {
+        setEmailResult({
+          result: "",
+          status: "",
+        });
+      }, 5000);
+
+      if (document) {
+        const form = document?.querySelector(
+          ".contact form"
+        ) as HTMLFormElement;
+        if (form) {
+          form.reset();
+        }
+      }
+    } catch (error: any) {
+      console.log(error);
+      setEmailResult({
+        result: "error when sending email",
+        status: "failed",
+      });
+    }
   };
   return (
     <section className="contact" id="contact">
@@ -37,7 +52,19 @@ const Contact = () => {
         <form
           onSubmit={sendEmail}
           className="w-full md:w-[60%] flex flex-col gap-3">
-          <p className="text-[#12ffb0]">{emailResult.result}</p>
+          <p
+            className={
+              emailResult.status === "success" ? "text-[#12ffb0]" : "text-red"
+            }>
+            {emailResult.result}
+          </p>
+          <input
+            className="outline-none px-2 py-1 bg-gray-300"
+            type="text"
+            name="from_name"
+            placeholder="name"
+            required
+          />
           <input
             className="outline-none px-2 py-1 bg-gray-300"
             type="email"
