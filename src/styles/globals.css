@@ -29,3 +29,25 @@ body {
   padding-right: 0;
   right: -100;
 }
+
+@media only screen and (max-width: 800px) {
+  .card {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .card:nth-child(4n + 1),
+  .card:nth-child(4n + 4) {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .card:nth-child(odd) {
+    padding-left: 25px;
+    left: -100;
+  }
+
+  .card:nth-child(even) {
+    padding-right: 25px;
+    right: -100;
+  }
+}
