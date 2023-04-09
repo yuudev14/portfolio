@@ -14,6 +14,15 @@ export default function Home() {
   return (
     <>
       <Head>
+        <title>Yu Takaki</title>
+        <meta property="og:site_name" content="Yu Takaki" />
+        <meta name="description" content="Yu Takaki's Portfolio" />
+        <meta property="og:image" content="/images/banner.png" />
+        <meta
+          name="keywords"
+          content="yu, yu takaki, takaki, yu's portfolio, yu developer"
+        />
+        <link rel="icon" type="image/x-icon" href="/images/logo.png" />
         <link
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
