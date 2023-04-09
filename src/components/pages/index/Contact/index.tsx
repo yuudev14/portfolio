@@ -13,11 +13,12 @@ const Contact = () => {
   const leftInitialVariants: Variants = {
     hidden: {
       opacity: 0,
-      x: -900,
+      x: -500,
     },
     visible: {
       opacity: 1,
       x: 0,
+
       transition: {
         type: "spring",
         damping: 100,
@@ -28,7 +29,7 @@ const Contact = () => {
   const rightInitialVariants: Variants = {
     hidden: {
       opacity: 0,
-      x: 900,
+      x: 500,
     },
     visible: {
       opacity: 1,
@@ -78,7 +79,7 @@ const Contact = () => {
     }
   };
   return (
-    <section ref={ref} className="contact" id="contact">
+    <section ref={ref} className="contact overflow-hidden" id="contact">
       <h2 className=" font-bold text-[40px] md:text-[50px] leading[70px] text-white">
         Contact
       </h2>

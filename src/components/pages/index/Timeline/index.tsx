@@ -13,7 +13,7 @@ import "react-vertical-timeline-component/style.min.css";
 
 const Timeline = () => {
   return (
-    <section>
+    <section id="experience">
       <h2 className="font-bold text-[40px] md:text-[50px] leading[70px] text-white">
         Experience
       </h2>

@@ -7,7 +7,7 @@ const ProjectLists = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: false });
   return (
-    <section ref={ref}>
+    <section ref={ref} id="projects">
       <h2 className=" font-bold text-[40px] md:text-[50px] leading[70px] text-white">
         Projects
       </h2>

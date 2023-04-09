@@ -137,7 +137,9 @@ const Banner = () => {
   }, []);
 
   return (
-    <section className="h-screen flex flex-col justify-center items-center banner">
+    <section
+      className="h-screen flex flex-col justify-center items-center banner"
+      id="home">
       <div className="relative">
         <h1 className="font-bold text-[40px] md:text-[60px] leading[70px] text-white">
           {"Hi, I'm Yu Takaki"}

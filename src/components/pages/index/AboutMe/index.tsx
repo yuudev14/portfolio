@@ -37,7 +37,7 @@ const AboutMe = () => {
     },
   };
   return (
-    <section ref={ref}>
+    <section ref={ref} id="about">
       <h2 className=" font-bold text-[40px] md:text-[50px] leading[70px] text-white">
         About Me
       </h2>
