@@ -36,10 +36,10 @@ const Timeline = () => {
         </VerticalTimelineElement>
         <VerticalTimelineElement
           className="vertical-timeline-element--work"
-          contentStyle={{ background: "#2190ff", color: "#fff" }}
-          contentArrowStyle={{ borderRight: "7px solid  rgb(33, 150, 243)" }}
+          contentStyle={{ background: "#f16565", color: "#fff" }}
+          contentArrowStyle={{ borderRight: "7px solid  #f16565" }}
           date="2022 - present"
-          iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
+          iconStyle={{ background: "#f16565", color: "#fff" }}
           icon={<MdVolunteerActivism />}>
           <h3 className="text-lg font-bold">Mamoru - Frontend Engineer</h3>
           <h4 className="vertical-timeline-element-subtitle">Japan</h4>

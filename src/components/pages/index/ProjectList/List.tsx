@@ -30,10 +30,6 @@ const List: React.FC<ListProps> = ({ proj, index, isInView }) => {
 
   const router = useRouter();
 
-  useEffect(() => {
-    console.log(index, isInView);
-  }, []);
-
   return (
     <AnimatePresence>
       <motion.li
