@@ -13,6 +13,17 @@ body {
   );
 }
 
+#header {
+  background: rgb(30, 48, 75);
+  background: linear-gradient(
+    90deg,
+    rgba(30, 48, 75, 1) 0%,
+    rgba(24, 38, 58, 1) 17%,
+    rgba(19, 29, 43, 1) 46%,
+    rgba(13, 17, 23, 1) 82%
+  );
+}
+
 .card {
   position: relative;
   padding: 25px;

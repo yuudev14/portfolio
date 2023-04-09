@@ -30,7 +30,6 @@ const AboutMe = () => {
       opacity: 1,
       x: 0,
       transition: {
-        delay: 0.5,
         type: "spring",
         damping: 100,
         stiffness: 500,

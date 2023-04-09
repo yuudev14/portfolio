@@ -137,14 +137,14 @@ const Banner = () => {
   }, []);
 
   return (
-    <section
-      ref={ref}
-      className="h-screen flex flex-col justify-center items-center banner">
+    <section className="h-screen flex flex-col justify-center items-center banner">
       <div className="relative">
         <h1 className="font-bold text-[40px] md:text-[60px] leading[70px] text-white">
           {"Hi, I'm Yu Takaki"}
         </h1>
-        <h2 className="text-[#15513d] text-lg m-auto bg-[#12ffb0] w-max px-2 font-medium">
+        <h2
+          ref={ref}
+          className="text-[#15513d] text-lg m-auto bg-[#12ffb0] w-max px-2 font-medium">
           Full Stack Software Engineer
         </h2>
       </div>
