@@ -1,11 +1,45 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import emailjs from "emailjs-com";
+import { Variants, useInView, motion } from "framer-motion";
 
 const Contact = () => {
   const [emailResult, setEmailResult] = useState({
     result: "",
     status: "",
   });
+
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: false });
+  const leftInitialVariants: Variants = {
+    hidden: {
+      opacity: 0,
+      x: -900,
+    },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        type: "spring",
+        damping: 100,
+        stiffness: 500,
+      },
+    },
+  };
+  const rightInitialVariants: Variants = {
+    hidden: {
+      opacity: 0,
+      x: 900,
+    },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        type: "spring",
+        damping: 100,
+        stiffness: 500,
+      },
+    },
+  };
   const sendEmail = async (e: any) => {
     e.preventDefault();
     try {
@@ -44,14 +78,16 @@ const Contact = () => {
     }
   };
   return (
-    <section className="contact" id="contact">
+    <section ref={ref} className="contact" id="contact">
       <h2 className=" font-bold text-[40px] md:text-[50px] leading[70px] text-white">
         Contact
       </h2>
       <div className="flex flex-col md:flex-row-reverse mt-[20px] gap-5">
-        <form
+        <motion.form
           onSubmit={sendEmail}
-          className="w-full md:w-[60%] flex flex-col gap-3">
+          className="w-full md:w-[60%] flex flex-col gap-3"
+          variants={rightInitialVariants}
+          animate={isInView ? "visible" : "hidden"}>
           <p
             className={
               emailResult.status === "success" ? "text-[#12ffb0]" : "text-red"
@@ -78,11 +114,14 @@ const Contact = () => {
             placeholder="message"
             required></textarea>
           <input
-            className="ml-auto text-[#15513d] text-xl cursor-pointer font-semibold px-4 py-2 w-full max-w-[200px] rounded-[5px] bg-[#12ffb0]"
+            className="ml-auto text-[#15513d] text-xl cursor-pointer font-semibold px-4 py-2 w-full md:max-w-[200px] rounded-[5px] bg-[#12ffb0]"
             type="submit"
           />
-        </form>
-        <div className="w-full md:w-[40%] text-white flex flex-col gap-5 items-center">
+        </motion.form>
+        <motion.div
+          className="w-full md:w-[40%] text-white flex flex-col gap-5 items-center"
+          variants={leftInitialVariants}
+          animate={isInView ? "visible" : "hidden"}>
           <div className="w-[204px]">
             <h2 className="text-xl">Contact Details:</h2>
             <ul className="flex flex-col gap-3 mt-3">
@@ -115,7 +154,7 @@ const Contact = () => {
               </a>
             </ul>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
