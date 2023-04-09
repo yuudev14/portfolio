@@ -6,7 +6,9 @@ import List from "./List";
 const ProjectLists = () => {
   return (
     <section>
-      <h2 className=" font-bold text-[40px] leading[70px]">Projects</h2>
+      <h2 className=" font-bold text-[40px] leading[70px] text-white">
+        Projects
+      </h2>
       <ul className="flex flex-wrap items-start">
         {projects.map((proj, i) => (
           <List key={`project-${i}`} proj={proj} index={i} />
