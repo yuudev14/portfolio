@@ -25,3 +25,27 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+.card {
+  position: relative;
+  padding: 5px;
+  height: 300px;
+  flex: 0 0 45%;
+  max-width: 45%;
+}
+
+.card:nth-child(4n + 1),
+.card:nth-child(4n + 4) {
+  flex: 0 0 55%;
+  max-width: 55%;
+}
+
+.card:nth-child(odd) {
+  padding-left: 0;
+  left: -100;
+}
+
+.card:nth-child(even) {
+  padding-right: 0;
+  right: -100;
+}
