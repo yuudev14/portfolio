@@ -29,10 +29,8 @@ const Timeline = () => {
             Rakuten Mobile - Software Engineer
           </h3>
           <h4 className="vertical-timeline-element-subtitle">Tokyo, Japan</h4>
-          <p>
-            Backend Development, Workflow Development, SOAR Playbook Development
-          </p>
-          <p>Python, Java, Spring Boot, MySQL</p>
+          <p>Workflow Development, SOAR Playbook Development, Automation</p>
+          <p>Python, CICD, Jenkins, MySQL</p>
         </VerticalTimelineElement>
         <VerticalTimelineElement
           className="vertical-timeline-element--work"
