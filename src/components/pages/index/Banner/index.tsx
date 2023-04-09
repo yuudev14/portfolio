@@ -1,25 +1,31 @@
-import React from "react";
+import React, { useRef } from "react";
 import Image from "next/image";
-import { Variants, motion } from "framer-motion";
+import { Variants, motion, useInView } from "framer-motion";
 
 const Banner = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: false });
   const initialVariants: Variants = {
     hidden: {
       opacity: 0,
-      y: 900,
+      y: 100,
     },
     visible: {
       opacity: 1,
       y: 0,
       transition: {
-        delay: 0.5,
+        type: "spring",
+        damping: 100,
+        stiffness: 500,
       },
     },
   };
   return (
-    <section className="h-screen flex flex-col justify-center items-center">
+    <section
+      ref={ref}
+      className="h-screen flex flex-col justify-center items-center">
       <div className="relative">
-        <h1 className="font-bold text-[60px] leading[70px] text-white">
+        <h1 className="font-bold text-[40px] md:text-[60px] leading[70px] text-white">
           {"Hi, I'm Yu Takaki"}
         </h1>
         <h2 className="text-[#15513d] text-lg m-auto bg-[#12ffb0] w-max px-2 font-medium">
@@ -27,9 +33,9 @@ const Banner = () => {
         </h2>
       </div>
       <motion.figure
+        className="w-full max-w-[700px]"
         variants={initialVariants}
-        initial="hidden"
-        animate="visible">
+        animate={isInView ? "visible" : "hidden"}>
         <Image
           src="/images/banner.png"
           height={1072}
