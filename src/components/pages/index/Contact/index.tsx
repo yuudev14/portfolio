@@ -120,37 +120,53 @@ const Contact = () => {
           />
         </motion.form>
         <motion.div
-          className="w-full md:w-[40%] text-white flex flex-col gap-5 items-center"
+          className="w-full mt-[20px] md:w-[40%] text-white flex flex-col gap-5 items-center"
           variants={leftInitialVariants}
           animate={isInView ? "visible" : "hidden"}>
-          <div className="w-[204px]">
-            <h2 className="text-xl">Contact Details:</h2>
+          <div className="w-[250px] bg-[#222c38] hover:bg-[#0d1117] transition p-5 border border-[#12ffb0] rounded-md">
+            {/* <h2 className="text-xl">Contact Details:</h2> */}
             <ul className="flex flex-col gap-3 mt-3">
-              <li className="flex gap-2 items-center">
+              {/* <li className="flex gap-2 items-center">
                 <i className="fa fa-phone"></i>
                 <p>090-4163-0614</p>
-              </li>
-              <li className="flex gap-2 items-center">
-                <i className="fa fa-envelope"></i>
-                <p>takaki.yu.dev@gmail.com</p>
+              </li> */}
+              <li className="flex gap-2 items-center flex-col">
+                <i className="fa fa-envelope text-[#12ffb0] text-2xl"></i>
+                <p className="font-bold text-[#12ffb0] mt-2">Email</p>
+                <p className="font-medium">takaki.yu.dev@gmail.com</p>
+                <a
+                  className="mt-3 hover:bg-[#12ffb0] hover:text-[#15513d] px-2 py-1 rounded-md transition"
+                  href="mailto:takaki.yu.dev@gmail.com">
+                  <span>Send a Message</span>
+                </a>
               </li>
             </ul>
           </div>
-          <div className="w-[204px]">
+          <div className="w-[250px]">
             <h2 className="text-xl">Socials:</h2>
             <ul className="flex gap-4 mt-3">
-              <a href="https://www.facebook.com/yuyu.takaks/" target="_blank">
+              <a
+                href="https://www.facebook.com/yuyu.takaks/"
+                target="_blank"
+                className="bg-black w-[40px] h-[40px] rounded-full flex justify-center items-center hover:bg-[#12ffb0] hover:text-[#222c38] transition">
                 <li className="fa fa-facebook"></li>
               </a>
-              <a href="https://twitter.com/takakiyuuu" target="_blank">
+              <a
+                href="https://twitter.com/takakiyuuu"
+                target="_blank"
+                className="bg-black w-[40px] h-[40px] rounded-full flex justify-center items-center hover:bg-[#12ffb0] hover:text-[#222c38] transition">
                 <li className="fa fa-twitter"></li>
               </a>
-              <a href="https://github.com/yuudev14" target="_blank">
+              <a
+                href="https://github.com/yuudev14"
+                target="_blank"
+                className="bg-black w-[40px] h-[40px] rounded-full flex justify-center items-center hover:bg-[#12ffb0] hover:text-[#222c38] transition">
                 <li className="fa fa-github"></li>
               </a>
               <a
                 href="https://www.linkedin.com/in/takakiiiyuuu/"
-                target="_blank">
+                target="_blank"
+                className="bg-black w-[40px] h-[40px] rounded-full flex justify-center items-center hover:bg-[#12ffb0] hover:text-[#222c38] transition">
                 <li className="fa fa-linkedin"></li>
               </a>
             </ul>
