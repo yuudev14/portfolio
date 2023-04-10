@@ -25,7 +25,7 @@ const Header = () => {
     <motion.header
       variants={initialVariants}
       animate={_close ? "hidden" : "visible"}
-      className="z-50 bg-black bg-opacity-20 flex justify-between items-center rounded-xl absolute w-full top-4 py-2 px-4 left-0">
+      className="z-50 bg-black bg-opacity-20 flex gap-5 justify-between items-center rounded-xl absolute w-[90%] max-w-[1080px] top-4 py-2 px-4 -translate-y-[50%]">
       <motion.div className="text-gray-400">
         <motion.p>
           Website currently under development. Please visit this{" "}
