@@ -59,26 +59,27 @@ const AboutMe = () => {
         <motion.div
           variants={rightInitialVariants}
           animate={isInView ? "visible" : "hidden"}
-          className="md:w-[60%] bg-[#0d1117] border-2 border-none md:bg-transparent md:border-2 md:border-[#222c38] rounded-xl px-6 p-4 md:p-0 flex flex-col gap-5 font-poppins font-normal dark:text-[#cde8f7] text-[#5B6478] text-[20px]">
+          className="md:w-[60%] bg-[#0d1117] border-2 border-none md:bg-transparent md:border-2 md:border-[#222c38] rounded-xl px-6 p-4 md:p-0 flex flex-col gap-5 font-poppins font-normal dark:text-[#cde8f7] text-[#5B6478] text-base md:text-[20px]">
           <p>
-            Hi, I am a full-stack software engineer who is always eager to learn
-            new things and willing to take challenges out of my comfort zone.
+            As a full-stack software engineer, I am always driven to expand my
+            knowledge and welcome challenges outside of my comfort zone.
           </p>
           <p>
-            Before coming here to Japan, I was a 2nd-year computer engineering
-            student in the Philippines. During that time, I decided to go to
-            Japan to continue my studies but things didn't go well as expected
-            so I tried to find an alternative way to achieve my dream job. I
-            taught myself how to code in between jobs. And then I passed the
-            admission process to an advanced software engineering course in
-            Tokyo and decided to join them to improve my skills. Since then, I
-            enjoy building full-stack apps using technologies like PostgreSQL,
-            React, Express and Node.js. Currently, I like to go deeper in
-            TypeScript to incorporate it in React and Node.js.
+            My journey in software engineering began with self-teaching and
+            culminated in my admission to an advanced software engineering
+            course in Tokyo, where I honed my skills. My passion lies in
+            building full-stack applications with technologies such as
+            PostgreSQL, React, Express, and Node.js. I am currently delving
+            deeper into TypeScript to enhance my work with React and Node.js. As
+            well as learning Go lang.
           </p>
           <p>
-            I'm currently based in Tokyo and I'm ready to embark on the next
-            chapter of my life.
+            Based in Tokyo, I am eager to take on new opportunities and embark
+            on the next chapter of my career. My technical expertise includes
+            React, CSS, HTML, JavaScript, Redux, PostgreSQL, MongoDB, Node.js,
+            Express, REST API, Socket.io, Git, Heroku, SQL, Python, TypeORM,
+            Typescript, and SOAR. I have also gained experience with Java, Go
+            lang and Spring boot
           </p>
         </motion.div>
       </div>
