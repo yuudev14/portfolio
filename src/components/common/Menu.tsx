@@ -15,7 +15,7 @@ const Menu = () => {
 
   return (
     <div className="fixed bg-black bg-opacity-50 bottom-4 rounded-full -translate-x-[50%] left-[50%] px-8 py-5">
-      <ul className="flex gap-10 text-white text-2xl">
+      <ul className="flex gap-7 text-white text-xl">
         <li
           className="cursor-pointer hover:text-[#12ffb0] transition"
           onClick={() => goToPage("#home")}>
