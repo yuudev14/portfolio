@@ -25,6 +25,7 @@ const AboutMe = () => {
     hidden: {
       opacity: 0,
       x: 900,
+      display: "none",
     },
     visible: {
       opacity: 1,

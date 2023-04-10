@@ -8,7 +8,7 @@ const Header = () => {
   const initialVariants: Variants = {
     hidden: {
       opacity: 0,
-      x: 200,
+      x: 500,
     },
     visible: {
       opacity: 1,
