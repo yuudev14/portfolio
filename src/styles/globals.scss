@@ -67,11 +67,13 @@ body {
   }
   .card:nth-child(odd) {
     padding-left: 25px;
+    padding-right: 25px;
     left: -100;
   }
 
   .card:nth-child(even) {
     padding-right: 25px;
+    padding-left: 25px;
     right: -100;
   }
 }
