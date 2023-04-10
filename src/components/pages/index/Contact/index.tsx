@@ -96,21 +96,21 @@ const Contact = () => {
             {emailResult.result}
           </p>
           <input
-            className="outline-none px-2 py-1 bg-gray-300"
+            className="text-gray-200 outline-none px-3 py-2 bg-[#0d1117] border-2 border-[#222c38] rounded-md"
             type="text"
             name="from_name"
             placeholder="name"
             required
           />
           <input
-            className="outline-none px-2 py-1 bg-gray-300"
+            className="text-gray-200 outline-none px-3 py-2 bg-[#0d1117] border-2 border-[#222c38] rounded-md"
             type="email"
             name="from_email"
             placeholder="email"
             required
           />
           <textarea
-            className="outline-none px-2 py-1 h-[200px] bg-gray-300"
+            className="text-gray-200 outline-none px-3 py-2 h-[300px] bg-[#0d1117] border-2 border-[#222c38] rounded-md"
             name="message"
             placeholder="message"
             required></textarea>
