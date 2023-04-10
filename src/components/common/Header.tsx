@@ -1,95 +1,48 @@
-import Image from "next/image";
-import { useRouter } from "next/router";
+import { Variants, motion } from "framer-motion";
 import React, { useState } from "react";
-import { GiHamburgerMenu } from "react-icons/gi";
+import { AiFillCloseCircle } from "react-icons/ai";
 
 const Header = () => {
-  const [display, setDisplay] = useState(false);
-  const closeOption = async (id: string) => {
-    const container = document.querySelector(id);
-    if (container) {
-      container.scrollIntoView({ behavior: "smooth" });
-    }
-    // } else {
-    //   router.;
-    //   document.querySelector(id).scrollIntoView();
-    // }
-    // document.querySelector("header ul").classList.remove("displayNav");
-    setDisplay(false);
+  const [_close, setClose] = useState(false);
+
+  const initialVariants: Variants = {
+    hidden: {
+      opacity: 0,
+      x: 200,
+    },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        type: "spring",
+        damping: 100,
+        stiffness: 500,
+      },
+    },
   };
+
   return (
-    <header id="header" className="z-50 bg-[#1e304b] fixed w-full top-0 left-0">
-      <div className="w-full max-w-[1280px] m-auto py-1 px-6 flex justify-between items-center">
-        <Image src="/images/logo.png" height={50} width={50} alt="banner" />
-        <ul className="md:flex gap-10 text-[18px] text-white hidden">
-          <li className="cursor-pointer" onClick={() => closeOption("#home")}>
-            Home
-          </li>
-          <li
-            className="cursor-pointer"
-            onClick={() => closeOption("#experience")}>
-            Experience
-          </li>
-          <li className="cursor-pointer" onClick={() => closeOption("#skills")}>
-            Skills
-          </li>
-          <li
-            className="cursor-pointer"
-            onClick={() => closeOption("#projects")}>
-            Projects
-          </li>
-          <li className="cursor-pointer" onClick={() => closeOption("#about")}>
-            About
-          </li>
-          <li
-            className="cursor-pointer"
-            onClick={() => closeOption("#contact")}>
-            Contact
-          </li>
-        </ul>
-        <GiHamburgerMenu
-          onClick={() => setDisplay(!display)}
-          size={40}
-          className="text-white cursor-pointer md:hidden"
-        />
-        {display && (
-          <div className="fixed top-[59px] w-screen left-0 h-screen bg-[#111a25] md:hidden">
-            <ul className="flex flex-col justify-center items-center gap-10 text-[18px] mt-10 text-white">
-              <li
-                className="cursor-pointer"
-                onClick={() => closeOption("#home")}>
-                Home
-              </li>
-              <li
-                className="cursor-pointer"
-                onClick={() => closeOption("#skills")}>
-                Skills
-              </li>
-              <li
-                className="cursor-pointer"
-                onClick={() => closeOption("#experience")}>
-                Experience
-              </li>
-              <li
-                className="cursor-pointer"
-                onClick={() => closeOption("#projects")}>
-                Projects
-              </li>
-              <li
-                className="cursor-pointer"
-                onClick={() => closeOption("#about")}>
-                About
-              </li>
-              <li
-                className="cursor-pointer"
-                onClick={() => closeOption("#contact")}>
-                Contact
-              </li>
-            </ul>
-          </div>
-        )}
-      </div>
-    </header>
+    <motion.header
+      variants={initialVariants}
+      animate={_close ? "hidden" : "visible"}
+      className="z-50 bg-black bg-opacity-20 flex justify-between items-center rounded-xl absolute w-full top-4 py-2 px-4 left-0">
+      <motion.div className="text-gray-400">
+        <motion.p>
+          Website currently under development. Please visit this{" "}
+          <motion.a
+            className="text-[#12ffb0]"
+            href="https://yuudev14.github.io/hiYuTakaki/"
+            target="_blank">
+            page
+          </motion.a>{" "}
+          instead
+        </motion.p>
+      </motion.div>
+      <AiFillCloseCircle
+        className="text-[#12ffb0] text-[40px] cursor-pointer"
+        onClick={() => setClose(true)}
+      />
+    </motion.header>
   );
 };
 
