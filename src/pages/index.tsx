@@ -7,6 +7,7 @@ import Header from "@/components/common/Header";
 import Skills from "@/components/pages/index/Skills";
 import Contact from "@/components/pages/index/Contact";
 import Head from "next/head";
+import Menu from "@/components/common/Menu";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -29,13 +30,14 @@ export default function Home() {
         />
       </Head>
       <main className="w-full max-w-[1080px] m-auto px-3 overflow-hidden flex mb-[100px] flex-col gap-16">
-        <Header />
+        {/* <Header /> */}
         <Banner />
         <Skills />
         <Timeline />
         <ProjectLists />
         <AboutMe />
         <Contact />
+        <Menu />
       </main>
     </>
   );
