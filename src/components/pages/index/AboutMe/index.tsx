@@ -59,7 +59,7 @@ const AboutMe = () => {
         <motion.div
           variants={rightInitialVariants}
           animate={isInView ? "visible" : "hidden"}
-          className="md:w-[60%] flex flex-col gap-5 font-poppins font-normal dark:text-[#A3B3BC] text-[#5B6478] text-[20px]">
+          className="md:w-[60%] bg-[#0d1117] border-2 border-none md:bg-transparent md:border-2 md:border-[#222c38] rounded-xl px-6 p-4 md:p-0 flex flex-col gap-5 font-poppins font-normal dark:text-[#cde8f7] text-[#5B6478] text-[20px]">
           <p>
             Hi, I am a full-stack software engineer who is always eager to learn
             new things and willing to take challenges out of my comfort zone.

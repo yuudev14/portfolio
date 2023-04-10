@@ -123,7 +123,7 @@ const Contact = () => {
           className="w-full mt-[20px] md:w-[40%] text-white flex flex-col gap-5 items-center"
           variants={leftInitialVariants}
           animate={isInView ? "visible" : "hidden"}>
-          <div className="w-[250px] bg-[#222c38] hover:bg-[#0d1117] transition p-5 border border-[#12ffb0] rounded-md">
+          <div className="w-full md:w-[250px] bg-[#222c38] hover:bg-[#0d1117] transition p-5 border border-[#12ffb0] rounded-md">
             {/* <h2 className="text-xl">Contact Details:</h2> */}
             <ul className="flex flex-col gap-3 mt-3">
               {/* <li className="flex gap-2 items-center">
@@ -142,8 +142,8 @@ const Contact = () => {
               </li>
             </ul>
           </div>
-          <div className="w-[250px]">
-            <h2 className="text-xl">Socials:</h2>
+          <div className="">
+            <h2 className="text-xl text-center">Socials:</h2>
             <ul className="flex gap-4 mt-3">
               <a
                 href="https://www.facebook.com/yuyu.takaks/"
