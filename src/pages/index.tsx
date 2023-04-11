@@ -30,7 +30,7 @@ export default function Home() {
         />
       </Head>
       <main className="relative w-full max-w-[1080px] m-auto px-3 overflow-hidden flex mb-[100px] flex-col gap-32">
-        <Header />
+        {/* <Header /> */}
         <Banner />
         <Skills />
         <Timeline />
