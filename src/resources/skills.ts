@@ -8,7 +8,6 @@ export const strongSkills = [
   "redux",
   "mongodb",
   "postgresql",
-  "mongodb",
   "python",
 ];
 export const experiencedSkills = ["vue", "django"];

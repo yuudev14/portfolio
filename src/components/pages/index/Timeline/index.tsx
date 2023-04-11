@@ -50,7 +50,7 @@ const Timeline = () => {
           contentStyle={{ background: "#12ffb0", color: "#15513d" }}
           date="2021 - 2021"
           iconStyle={{ background: "#12ffb0", color: "#15513d" }}
-          dateClassName="text-white"
+          dateClassName="text-[#15513d] mdlg:text-white"
           icon={<MdSchool />}>
           <h3 className="text-lg font-bold">Code Chrysalis - Student</h3>
           <h4 className="vertical-timeline-element-subtitle">Tokyo, Japan</h4>
@@ -66,7 +66,7 @@ const Timeline = () => {
           contentStyle={{ background: "#12ffb0", color: "#15513d" }}
           date="2018 - 2019"
           iconStyle={{ background: "#12ffb0", color: "#15513d" }}
-          dateClassName="text-white"
+          dateClassName="text-[#15513d] mdlg:text-white"
           icon={<MdSchool />}>
           <h3 className="text-lg font-bold">
             Technological Institute of the Philippines - Computer Engineering

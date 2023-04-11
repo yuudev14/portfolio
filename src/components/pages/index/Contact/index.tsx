@@ -83,7 +83,7 @@ const Contact = () => {
       <h2 className=" font-bold text-[40px] md:text-[50px] leading[70px] text-white">
         Contact
       </h2>
-      <div className="flex flex-col md:flex-row-reverse mt-[20px] gap-5">
+      <div className="px-3 md:px-0 flex flex-col md:flex-row-reverse mt-[20px] gap-5">
         <motion.form
           onSubmit={sendEmail}
           className="w-full md:w-[60%] flex flex-col gap-3"
