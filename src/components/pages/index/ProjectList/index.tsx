@@ -67,7 +67,7 @@ const ProjectLists = () => {
         // className="flex flex-wrap items-start"
         variants={initialVariants}
         animate={isInView ? "visible" : "hidden"}
-        className="px-7 xs:px-0 grid grid-cols-1 xs:grid-cols-2 mt-7 md:grid-cols-3 gap-3 w-full max-w-[868px] m-auto">
+        className="px-7 xs:px-0 grid grid-cols-1 xs:grid-cols-2 mt-7 md:grid-cols-3 gap-10 xs:gap-3 w-full max-w-[868px] m-auto">
         {_projects.map((proj, i) => (
           // <List
           //   key={`project-${i}`}
