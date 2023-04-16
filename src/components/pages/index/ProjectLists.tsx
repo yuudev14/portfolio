@@ -1,7 +1,6 @@
 import { projects } from "@/resources/projects";
 import { Variants, motion, useInView } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
-import List from "./List";
 import Image from "next/image";
 import { BsGithub } from "react-icons/bs";
 import { projectsType } from "@/types/global";
@@ -36,7 +35,7 @@ const ProjectLists = () => {
     );
   }, [filter]);
   return (
-    <section ref={ref} id="projects" className="w-full min-h-screen">
+    <section ref={ref} id="projects" className="w-full">
       <h2 className=" font-bold text-[40px] md:text-[50px] leading[70px] text-text_light_neon">
         Projects
       </h2>

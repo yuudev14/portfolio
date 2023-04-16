@@ -142,35 +142,6 @@ const Contact = () => {
               </li>
             </ul>
           </div>
-          <div className="">
-            <h2 className="text-xl text-center">Socials:</h2>
-            <ul className="flex gap-4 mt-3">
-              <a
-                href="https://www.facebook.com/yuyu.takaks/"
-                target="_blank"
-                className="bg-black w-[40px] h-[40px] rounded-full flex justify-center items-center hover:bg-[#12ffb0] hover:text-[#222c38] transition">
-                <li className="fa fa-facebook"></li>
-              </a>
-              <a
-                href="https://twitter.com/takakiyuuu"
-                target="_blank"
-                className="bg-black w-[40px] h-[40px] rounded-full flex justify-center items-center hover:bg-[#12ffb0] hover:text-[#222c38] transition">
-                <li className="fa fa-twitter"></li>
-              </a>
-              <a
-                href="https://github.com/yuudev14"
-                target="_blank"
-                className="bg-black w-[40px] h-[40px] rounded-full flex justify-center items-center hover:bg-[#12ffb0] hover:text-[#222c38] transition">
-                <li className="fa fa-github"></li>
-              </a>
-              <a
-                href="https://www.linkedin.com/in/takakiiiyuuu/"
-                target="_blank"
-                className="bg-black w-[40px] h-[40px] rounded-full flex justify-center items-center hover:bg-[#12ffb0] hover:text-[#222c38] transition">
-                <li className="fa fa-linkedin"></li>
-              </a>
-            </ul>
-          </div>
         </motion.div>
       </div>
     </section>

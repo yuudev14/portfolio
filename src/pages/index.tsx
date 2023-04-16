@@ -1,15 +1,15 @@
+import { Suspense } from "react";
+import Head from "next/head";
 import { Inter } from "next/font/google";
-import ProjectLists from "@/components/pages/index/ProjectList";
+import ProjectLists from "@/components/pages/index/ProjectLists";
 import Timeline from "@/components/pages/index/Timeline";
 import Banner from "@/components/pages/index/Banner";
 import AboutMe from "@/components/pages/index/AboutMe";
-import Header from "@/components/common/Header";
 import Skills from "@/components/pages/index/Skills";
 import Contact from "@/components/pages/index/Contact";
-import Head from "next/head";
 import Menu from "@/components/common/Menu";
-
-const inter = Inter({ subsets: ["latin"] });
+import Socials from "@/components/pages/index/Socials";
+import Footer from "@/components/pages/index/Footer";
 
 export default function Home() {
   return (
@@ -29,16 +29,20 @@ export default function Home() {
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
         />
       </Head>
-      <main className="relative w-full max-w-[1080px] m-auto px-3 overflow-hidden flex mb-[100px] flex-col gap-32">
-        {/* <Header /> */}
-        <Banner />
-        <Skills />
-        <Timeline />
-        <ProjectLists />
-        <AboutMe />
-        <Contact />
-        <Menu />
-      </main>
+      <Suspense fallback={<div>Loading...</div>}>
+        <main className="relative w-full max-w-[1080px] m-auto px-3 overflow-hidden flex mb-[100px] flex-col gap-32">
+          {/* <Header /> */}
+          <Banner />
+          <Skills />
+          <Timeline />
+          <ProjectLists />
+          <AboutMe />
+          <Contact />
+          <Menu />
+          <Socials />
+          <Footer />
+        </main>
+      </Suspense>
     </>
   );
 }

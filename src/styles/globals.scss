@@ -28,52 +28,6 @@ body {
   );
 }
 
-.card {
-  position: relative;
-  padding: 25px;
-  height: 350px;
-  flex: 0 0 45%;
-  max-width: 45%;
-}
-
-.card:nth-child(4n + 1),
-.card:nth-child(4n + 4) {
-  flex: 0 0 55%;
-  max-width: 55%;
-}
-
-.card:nth-child(odd) {
-  padding-left: 0;
-  left: -100;
-}
-
-.card:nth-child(even) {
-  padding-right: 0;
-  right: -100;
-}
-
-@media only screen and (max-width: 800px) {
-  .card {
-    flex: 0 0 100%;
-    max-width: 100%;
-    height: 230px;
-    padding: 15px 15px 0;
-  }
-
-  .card:nth-child(4n + 1),
-  .card:nth-child(4n + 4) {
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
-  .card:nth-child(odd) {
-    padding-left: 25px;
-    padding-right: 25px;
-    left: -100;
-  }
-
-  .card:nth-child(even) {
-    padding-right: 25px;
-    padding-left: 25px;
-    right: -100;
-  }
+#email {
+  writing-mode: vertical-rl;
 }
