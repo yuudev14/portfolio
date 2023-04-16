@@ -33,7 +33,7 @@ export const projects: Project[] = [
     name: "Sustainability Page",
     description:
       "Webapp to let Sustainability Business to create their own website.",
-    demo: "https://staging.lity.page/",
+    demo: "https://sustainabi.lity.page/",
     github: null,
     type: "freelance",
     tech: [
