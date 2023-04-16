@@ -80,7 +80,9 @@ const Project: React.FC<ProjectProps> = ({ imagePaths, slug }) => {
           <ResponsiveMasonry columnsCountBreakPoints={{ 350: 2, 750: 3 }}>
             <Masonry>
               {imagePaths.map((image) => (
-                <li className="m-3 overflow-hidden mb-12 shadow-md" key={image}>
+                <li
+                  className="m-1 mb-5 md:m-3 overflow-hidden md:mb-12 shadow-md"
+                  key={image}>
                   <Image
                     src={image}
                     className="min-h-full min-w-full object-cover"
