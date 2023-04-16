@@ -89,7 +89,9 @@ const ProjectLists = () => {
             </figure>
             <motion.div className="bg-[#17202b] py-3 px-4 flex-1 flex gap-2 flex-col">
               <h1 className="text-white font-semibold">{proj.name}</h1>
-              <p className="text-sm text-[#7298c6]">{proj.description}</p>
+              <p className="text-sm text-[#7298c6] flex-1">
+                {proj.description}
+              </p>
               <ul className="mt-5 flex gap-3 flex-wrap mb-2">
                 {proj.tech.map((Icon, x) => (
                   <Icon key={`project-${i}-${x}`} className="text-[#6288b4]" />
