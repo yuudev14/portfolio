@@ -80,7 +80,7 @@ const Contact = () => {
   };
   return (
     <section ref={ref} className="contact overflow-hidden" id="contact">
-      <h2 className=" font-bold text-[40px] md:text-[50px] leading[70px] text-white">
+      <h2 className=" font-bold text-[40px] md:text-[50px] leading[70px] text-text_light_neon">
         Contact
       </h2>
       <div className="px-3 md:px-0 flex flex-col md:flex-row-reverse mt-[20px] gap-5">

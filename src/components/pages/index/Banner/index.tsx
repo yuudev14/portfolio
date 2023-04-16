@@ -141,7 +141,7 @@ const Banner = () => {
       className="h-screen flex flex-col justify-center items-center banner"
       id="home">
       <div className="relative">
-        <h1 className="font-bold text-[40px] md:text-[60px] leading[70px] text-white">
+        <h1 className="font-bold text-[40px] md:text-[60px] leading[70px] text-text_light_neon">
           {"Hi, I'm Yu Takaki"}
         </h1>
         <h2

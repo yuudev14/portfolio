@@ -5,6 +5,7 @@ import List from "./List";
 import Image from "next/image";
 import { BsGithub } from "react-icons/bs";
 import { projectsType } from "@/types/global";
+import Link from "next/link";
 
 const ProjectLists = () => {
   const [filter, setFilter] = useState("all");
@@ -36,7 +37,7 @@ const ProjectLists = () => {
   }, [filter]);
   return (
     <section ref={ref} id="projects" className="w-full min-h-screen">
-      <h2 className=" font-bold text-[40px] md:text-[50px] leading[70px] text-white">
+      <h2 className=" font-bold text-[40px] md:text-[50px] leading[70px] text-text_light_neon">
         Projects
       </h2>
       <div className="m-auto w-max flex gap-4 mt-8">
@@ -78,7 +79,9 @@ const ProjectLists = () => {
           <motion.div
             key={`project-${i}`}
             className="rounded-[15px] overflow-hidden flex flex-col">
-            <figure className="max-w-full aspect-[1/.8] align-middle">
+            <Link
+              href={`/projects/${proj.slug}`}
+              className="max-w-full aspect-[1/.8] align-middle relative overflow-hidden">
               <Image
                 src={`/${proj.images}`}
                 className="min-h-full min-w-full object-cover"
@@ -86,7 +89,9 @@ const ProjectLists = () => {
                 height={300}
                 width={300}
               />
-            </figure>
+              <div className="absolute w-full h-full bg-primary top-0 opacity-10 hover:opacity-0 transition"></div>
+            </Link>
+
             <motion.div className="bg-[#17202b] py-3 px-4 flex-1 flex gap-2 flex-col">
               <h1 className="text-white font-semibold">{proj.name}</h1>
               <p className="text-sm text-[#7298c6] flex-1">

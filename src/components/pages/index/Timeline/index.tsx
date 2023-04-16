@@ -14,7 +14,7 @@ import "react-vertical-timeline-component/style.min.css";
 const Timeline = () => {
   return (
     <section id="experience">
-      <h2 className="font-bold text-[40px] md:text-[50px] leading[70px] text-white">
+      <h2 className="font-bold text-[40px] md:text-[50px] leading[70px] text-text_light_neon">
         Experience
       </h2>
       <VerticalTimeline>

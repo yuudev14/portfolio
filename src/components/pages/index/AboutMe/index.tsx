@@ -39,7 +39,7 @@ const AboutMe = () => {
   };
   return (
     <section ref={ref} id="about">
-      <h2 className=" font-bold text-[40px] md:text-[50px] leading[70px] text-white">
+      <h2 className=" font-bold text-[40px] md:text-[50px] leading[70px] text-text_light_neon">
         About Me
       </h2>
       <div className="flex flex-col md:flex-row justify-center gap-9 md:gap-2 mt-10">
@@ -47,8 +47,9 @@ const AboutMe = () => {
           className="md:w-[40%] flex items-center flex-col gap-5"
           variants={leftInitialVariants}
           animate={isInView ? "visible" : "hidden"}>
-          <motion.figure className="w-[170px] h-[170px] rounded-full overflow-hidden">
+          <motion.figure className="relative w-[170px] h-[170px] rounded-full overflow-hidden">
             <Image src="/images/yu.jpg" height={170} width={170} alt="banner" />
+            <div className="absolute w-full h-full bg-primary top-0 opacity-10 transition"></div>
           </motion.figure>
           <a href={process.env.NEXT_PUBLIC_RESUME} target="_blank">
             <motion.button className="text-[#15513d] text-xl font-semibold px-4 py-2 w-full max-w-[200px] rounded-[5px] bg-[#12ffb0]">

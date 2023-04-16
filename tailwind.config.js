@@ -16,6 +16,13 @@ module.exports = {
         xs: "450px",
         mdlg: "1170px",
       },
+      colors: {
+        primary: "#12ffb0",
+        primary_dark: "#15513d",
+        bluish: "#1b2a42",
+        text_light_bluish: "#7298c6",
+        text_light_neon: "#dcfef3",
+      },
     },
   },
   plugins: [],

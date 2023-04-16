@@ -5,10 +5,10 @@ import React, { useEffect, useState } from "react";
 const Skills: React.FC = () => {
   return (
     <section className="skills" id="skills">
-      <h2 className=" font-bold text-[40px] md:text-[50px] leading[70px] text-white">
+      <h2 className=" font-bold text-[40px] md:text-[50px] leading[70px] text-text_light_neon">
         Skills
       </h2>
-      <h3 className=" font-bold text-[20px] leading[70px] text-white text-center">
+      <h3 className=" font-bold text-[20px] leading[70px] text-text_light_neon text-center">
         Strong
       </h3>
       <div className="skillContainer">
@@ -23,7 +23,7 @@ const Skills: React.FC = () => {
           />
         ))}
       </div>
-      <h3 className=" font-bold text-[20px] leading[70px] text-white text-center">
+      <h3 className=" font-bold text-[20px] leading[70px] text-text_light_neon text-center">
         Experienced
       </h3>
       <div className="skillContainer">
