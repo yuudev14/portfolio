@@ -155,7 +155,7 @@ const Banner = () => {
         variants={initialVariants}
         animate={isInView ? "visible" : "hidden"}>
         <Image
-          src="/images/banner.png"
+          src="/images/banner1.png"
           height={1072}
           width={1908}
           alt="banner"
