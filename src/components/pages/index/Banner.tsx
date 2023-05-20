@@ -151,11 +151,11 @@ const Banner = () => {
         </h2>
       </div>
       <motion.figure
-        className="w-full max-w-[700px]"
+        className="w-full max-w-[600px]"
         variants={initialVariants}
         animate={isInView ? "visible" : "hidden"}>
         <Image
-          src="/images/banner1.png"
+          src="/images/home-banner.png"
           height={1072}
           width={1908}
           alt="banner"
