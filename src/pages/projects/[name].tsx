@@ -91,6 +91,7 @@ const Project: React.FC<ProjectProps> = ({ imagePaths, slug }) => {
                       alt="project image"
                       height={300}
                       width={300}
+                      loading="lazy"
                     />
                   </li>
                 ))}
