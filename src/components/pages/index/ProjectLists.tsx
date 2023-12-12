@@ -41,23 +41,20 @@ const ProjectLists = () => {
       </h2>
       <div className="m-auto w-max flex gap-4 mt-8">
         <button
-          className={`rounded-md font-bold text-xl text-[#cde8f7] border border-transparent transition hover:border-[#12ffb0] p-2 ${
-            filter === "all" ? "bg-[#12ffb0] !text-[#15513d]" : ""
-          }`}
+          className={`rounded-md font-bold text-xl text-[#cde8f7] border border-transparent transition hover:border-[#12ffb0] p-2 ${filter === "all" ? "bg-[#12ffb0] !text-[#15513d]" : ""
+            }`}
           onClick={() => setFilter("all")}>
           All
         </button>
         <button
-          className={`rounded-md font-bold text-xl text-[#cde8f7] border border-transparent transition hover:border-[#12ffb0] p-2 ${
-            filter === "freelance" ? "bg-[#12ffb0] !text-[#15513d]" : ""
-          }`}
+          className={`rounded-md font-bold text-xl text-[#cde8f7] border border-transparent transition hover:border-[#12ffb0] p-2 ${filter === "freelance" ? "bg-[#12ffb0] !text-[#15513d]" : ""
+            }`}
           onClick={() => setFilter("freelance")}>
           Freelance
         </button>
         <button
-          className={`rounded-md font-bold text-xl text-[#cde8f7] border border-transparent transition hover:border-[#12ffb0] p-2 ${
-            filter === "personal" ? "bg-[#12ffb0] !text-[#15513d]" : ""
-          }`}
+          className={`rounded-md font-bold text-xl text-[#cde8f7] border border-transparent transition hover:border-[#12ffb0] p-2 ${filter === "personal" ? "bg-[#12ffb0] !text-[#15513d]" : ""
+            }`}
           onClick={() => setFilter("personal")}>
           Personal
         </button>
@@ -87,6 +84,7 @@ const ProjectLists = () => {
                 alt="skill"
                 height={300}
                 width={300}
+                loading="lazy"
               />
               <div className="absolute w-full h-full bg-primary top-0 opacity-10 hover:opacity-0 transition"></div>
             </Link>
