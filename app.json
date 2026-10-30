@@ -1,0 +1,11 @@
+{
+  "name": "portfolio",
+  "stack": "heroku-22",
+  "buildpacks": [
+    { "url": "heroku/nodejs" }
+  ],
+  "formation": {
+    "web": { "quantity": 1, "size": "Standard-1X" }
+  },
+  "addons": [],
+}
